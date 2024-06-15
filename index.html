@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Tic-Tac-Toe <img src="logo.png"></h2>
+    <div class="game-board">
+        <div class="containers">
+            <div class="line"></div>
+            <div class="container container-3" id="cnt3">
+                <div class="block block-3 bt-0 bl-0"><span class="text t3"></span></div>
+                <div class="block block-3 bt-0"><span class="text t3"></span></div>
+                <div class="block block-3 bt-0 br-0"><span class="text t3"></span></div>
+                <div class="block block-3 bl-0"><span class="text t3"></span></div>
+                <div class="block block-3"><span class="text t3"></span></div>
+                <div class="block block-3 br-0"><span class="text t3"></span></div>
+                <div class="block block-3 bl-0 bb-0"><span class="text t3"></span></div>
+                <div class="block block-3 bb-0"><span class="text t3"></span></div>
+                <div class="block block-3 br-0 bb-0"><span class="text t3"></span></div>
+            </div>
+            <div class="container container-4" id="cnt4">
+                <div class="block block-4 bt-0 bl-0"><span class="text t4"></span></div>
+                <div class="block block-4 bt-0"><span class="text t4"></span></div>
+                <div class="block block-4 bt-0"><span class="text t4"></span></div>
+                <div class="block block-4 bt-0 br-0"><span class="text t4"></span></div>
+                <div class="block block-4 bl-0"><span class="text t4"></span></div>
+                <div class="block block-4"><span class="text t4"></span></div>
+                <div class="block block-4"><span class="text t4"></span></div>
+                <div class="block block-4 br-0"><span class="text t4"></span></div>
+                <div class="block block-4 bl-0"><span class="text t4"></span></div>
+                <div class="block block-4 "><span class="text t4"></span></div>
+                <div class="block block-4 "><span class="text t4"></span></div>
+                <div class="block block-4 br-0"><span class="text t4"></span></div>
+                <div class="block block-4 bl-0 bb-0"><span class="text t4"></span></div>
+                <div class="block block-4 bb-0"><span class="text t4"></span></div>
+                <div class="block block-4 bb-0"><span class="text t4"></span></div>
+                <div class="block block-4 br-0 bb-0"><span class="text t4"></span></div>
+            </div>
+            <div class="container container-5" id="cnt5">
+                <div class="block block-5 bt-0 bl-0"><span class="text t5"></span></div>
+                <div class="block block-5 bt-0"><span class="text t5"></span></div>
+                <div class="block block-5 bt-0"><span class="text t5"></span></div>
+                <div class="block block-5 bt-0"><span class="text t5"></span></div>
+                <div class="block block-5 bt-0 br-0"><span class="text t5"></span></div>
+                <div class="block block-5 bl-0"><span class="text t5"></span></div>
+                <div class="block block-5"><span class="text t5"></span></div>
+                <div class="block block-5"><span class="text t5"></span></div>
+                <div class="block block-5"><span class="text t5"></span></div>
+                <div class="block block-5 br-0"><span class="text t5"></span></div>
+                <div class="block block-5 bl-0"><span class="text t5"></span></div>
+                <div class="block block-5 "><span class="text t5"></span></div>
+                <div class="block block-5 "><span class="text t5"></span></div>
+                <div class="block block-5"><span class="text t5"></span></div>
+                <div class="block block-5 br-0"><span class="text t5"></span></div>
+                <div class="block block-5 bl-0"><span class="text t5"></span></div>
+                <div class="block block-5 "><span class="text t5"></span></div>
+                <div class="block block-5 "><span class="text t5"></span></div>
+                <div class="block block-5"><span class="text t5"></span></div>
+                <div class="block block-5 br-0"><span class="text t5"></span></div>
+                <div class="block block-5 bl-0 bb-0"><span class="text t5"></span></div>
+                <div class="block block-5 bb-0"><span class="text t5"></span></div>
+                <div class="block block-5 bb-0"><span class="text t5"></span></div>
+                <div class="block block-5 bb-0"><span class="text t5"></span></div>
+                <div class="block block-5 br-0 bb-0"><span class="text t5"></span></div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="turn">
+                <div class="x"><span>X</span></div>
+                <div class="o"><span>O</span></div>
+            </div>
+            <button id="openModal">Reset</button>
+            <button id="newgame">New Game</button>
+            <div class="mode">
+                <input type="checkbox" id="solo"> <span>Play Solo</span>
+            </div>
+            <table>
+                <tr>
+                    <td style="color:maroon">LeaderBoard</td>
+                </tr>
+                <tr>
+                    <td id="xturn"><input type="text" id="player1name" value="Player 1"></td>
+                    <td><input value="0" type="text" id="xscore" readonly></td>
+                </tr>
+                <tr>
+                    <td id="oturn"><input type="text" id="player2name" value="Player 2"></td>
+                    <td><input value="0" type="text" id="oscore" readonly></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="sizes" id="brdszs">
+        <div class="message" id="brdsize">
+            <p>Select Board Size</p>
+            <button id="3x3">3x3</button>
+            <button id="4x4">4x4</button>
+            <button id="5x5">5x5</button>
+        </div>
+    </div>
+    <div class="modal" id="winner">
+        <div class="message" id="winmsg">
+            <h3></h3>
+            <p>Game will auto reset in 5 seconds.</p>
+            <button id="close">Close</button>
+        </div>
+    </div>
+    <div class="modal" id="warning">
+        <div class="message">
+            <h3>Current game will reset!</h3>
+            <p>Do you want to proceed?</p>
+            <button id="reset">Reset</button>
+            <button id="cancel">Cancel</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
